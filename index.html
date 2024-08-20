@@ -9,40 +9,70 @@
     <style>
         body {
             font-family: 'PT Sans', sans-serif;
-            color: black; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 100vh;
+            color: black; /* Text color is black */
             margin: 0;
+            padding: 0;
             background-color: #f0f0f0;
+            scroll-behavior: smooth; /* Smooth scrolling effect */
         }
-        h1 {
-            margin-bottom: 10px;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .hero h1 {
             font-size: 2.5em;
+            margin-bottom: 10px;
         }
-        h2 {
+        .hero h2 {
             font-size: 1.5em;
             font-weight: normal;
         }
-        a {
-            color: black; 
-            text-decoration: none;
-            margin-top: 20px;
-            display: inline-block;
-            font-size: 1.2em;
+        .about {
+            padding: 50px 20px;
+            background-color: #ffffff;
         }
-        a:hover {
+        .about h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about p {
+            font-size: 1.2em;
+            text-align: justify;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .scroll-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .scroll-link:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h1>Theoretical Ammonia Plant Analysis</h1>
-        <h2>Allison Chiang, UCSD</h2>
-        <a href="About.html">About This Project</a>
+    <div class="container">
+        <div class="hero">
+            <h1>Theoretical Ammonia Plant Analysis</h1>
+            <h2>Allison Chiang, UCSD</h2>
+            <a href="#about" class="scroll-link">About This Project</a>
+        </div>
+        <div id="about" class="about">
+            <h1>About</h1>
+            <p>
+                This project began in November 2023 and concluded in June 2024. I worked with a team of 3 other Chemical Engineering undergraduates to analyze the ammonia plant using thermodynamic, energy balance, and material balance methods. The scope of the project includes creating and annotating process flow diagrams, writing scripts in MATLAB to run repetitive calculations, using Excel to organize data, and extensive teamwork throughout.
+            </p>
+        </div>
     </div>
 </body>
 </html>
