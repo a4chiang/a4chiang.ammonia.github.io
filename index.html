@@ -9,16 +9,37 @@
     <style>
         body {
             font-family: 'PT Sans', sans-serif;
-            color: black; /* Text color is black */
+            color: black;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
-            scroll-behavior: smooth; /* Smooth scrolling effect */
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 1.2em;
+        }
+        .navbar a:hover {
+            background-color: #575757;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 80px 20px 20px; /* Added padding-top to avoid content overlap with navbar */
         }
         .hero {
             text-align: center;
@@ -47,27 +68,19 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        .scroll-link {
-            display: block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: black;
-            font-size: 1.2em;
-            text-align: center;
-        }
-        .scroll-link:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="project.html">Project Details</a>
+    </div>
     <div class="container">
         <div class="hero">
             <h1>Theoretical Ammonia Plant Analysis</h1>
             <h2>Allison Chiang, UCSD</h2>
-            <a href="#about" class="scroll-link">About This Project</a>
         </div>
-        <div id="about" class="about">
+        <div class="about" id="about">
             <h1>About</h1>
             <p>
                 This project began in November 2023 and concluded in June 2024. I worked with a team of 3 other Chemical Engineering undergraduates to analyze the ammonia plant using thermodynamic, energy balance, and material balance methods. The scope of the project includes creating and annotating process flow diagrams, writing scripts in MATLAB to run repetitive calculations, using Excel to organize data, and extensive teamwork throughout.
