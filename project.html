@@ -38,7 +38,7 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 80px 20px 20px; /* Added padding-top to avoid content overlap with navbar */
+            padding: 80px 20px 20px;
         }
         .project-details {
             padding: 50px 20px;
@@ -55,6 +55,30 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        .project-details img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .caption {
+            text-align: center;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -68,8 +92,14 @@
             <p>
                 Here you can include all the details about your theoretical ammonia plant analysis project. This might include detailed descriptions of the methods used, analysis results, and any additional information that provides a comprehensive overview of the project.
             </p>
-            <!-- You can add images or other content here -->
+            <h2>Material and Energy Balance Analysis</h2>
+            <img src="https://github.com/username/repository/raw/main/images/materialenergybal.png" alt="Material and Energy Balance Diagram">
+            <div class="caption">Given diagram</div>
+            <!-- Add more images and content as needed -->
         </div>
+    </div>
+    <div class="footer">
+        <p>Contact me at: <a href="mailto:a4chiang@ucsd.edu">a4chiang@ucsd.edu</a></p>
     </div>
 </body>
 </html>
