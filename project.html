@@ -6,6 +6,7 @@
     <title>Project Details - Theoretical Ammonia Plant Analysis</title>
     <!-- Link to PT Sans from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'PT Sans', sans-serif;
@@ -79,10 +80,19 @@
             color: white;
             text-decoration: none;
         }
-         iframe {
+        iframe {
             width: 100%;
             height: 900px; 
             border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .code-container {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 1.1em;
             margin-top: 20px;
         }
     </style>
@@ -96,18 +106,34 @@
         <div class="project-details">
             <h1>Project Details</h1>
             <p>
-               Analysis of the given theoretical ammonia plant through 3 different methods- material and energy balance, thermodynamics, and chemical reaction engineering.
+               Analysis of the given theoretical ammonia plant through three different methods: material and energy balance, thermodynamics, and chemical reaction engineering.
             </p>
             <h2>Material and Energy Balance Analysis</h2>
             <img src="https://github.com/a4chiang/a4chiang.theoretical-ammonia-plant.github.io/blob/main/materialenergybal.png?raw=true" alt="Material and Energy Balance Diagram">
             <div class="caption">Given diagram</div>
             <iframe src="https://docs.google.com/spreadsheets/d/1MACwnucgrBKp1jF9aScQGJfhCYAqnU-NxRVgel_oYIc/pubhtml?widget=true&amp;headers=false"></iframe>
+
             <h2>Thermodynamic Analysis</h2>
             <iframe src="https://docs.google.com/spreadsheets/d/13PErae48-fAmO8fRIfIIFrJuTAPdqXLO6-qR2BM6vK4/pubhtml?widget=true&amp;headers=false"></iframe>
+            <h3>MATLAB Script to solve ICPH</h3>
+            <!-- MATLAB Script Display -->
+            <div class="code-container">
+                <h2>MATLAB Script: ICPH Function</h2>
+                <pre><code class="matlab">
+function I = ICPH(A, B, C, D, Ti, Tf)
+    I = A*(Tf-Ti) + B/2*(Tf^2-Ti^2) + C/3*(Tf^3-Ti^3) - D*(1/Tf-1/Ti);
+end
+                </code></pre>
+            </div>
         </div>
     </div>
+
     <div class="footer">
         <p><a href="mailto:a4chiang@ucsd.edu">a4chiang@ucsd.edu</a></p>
     </div>
+
+    <!-- Highlight.js script for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
