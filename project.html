@@ -115,10 +115,8 @@
 
             <h2>Thermodynamic Analysis</h2>
             <iframe src="https://docs.google.com/spreadsheets/d/13PErae48-fAmO8fRIfIIFrJuTAPdqXLO6-qR2BM6vK4/pubhtml?widget=true&amp;headers=false"></iframe>
-            <h3>MATLAB Script to solve ICPH</h3>
-            <!-- MATLAB Script Display -->
             <div class="code-container">
-                <h2>MATLAB Script: ICPH Function</h2>
+                <h2>MATLAB Script to solve ICPH</h2>
                 <pre><code class="matlab">
 function I = ICPH(A, B, C, D, Ti, Tf)
     I = A*(Tf-Ti) + B/2*(Tf^2-Ti^2) + C/3*(Tf^3-Ti^3) - D*(1/Tf-1/Ti);
