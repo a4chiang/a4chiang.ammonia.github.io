@@ -123,6 +123,14 @@ function I = ICPH(A, B, C, D, Ti, Tf)
 end
                 </code></pre>
             </div>
+            <div class="code-container">
+                <h2>MATLAB Script to solve ICPS</h2>
+                <pre><code class="matlab">
+function I = ICPS(A, B, C, D, Ti, Tf)
+I= A*log(Tf/Ti)+(B*Ti+(C*Ti^2+D/(((Tf/Ti)^2)*Ti^2)))*((Tf/Ti)-1);
+end
+                </code></pre>
+            </div>
         </div>
     </div>
 
